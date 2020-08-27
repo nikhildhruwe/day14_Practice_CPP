@@ -24,9 +24,7 @@ class B : public A{
 };
 
 int main(){
-    A *a;
-    B b;
-    a = &b;
+    A *a = new B();
     a->display(); // calls display function of class A because of static binding.
     // To call class b display function, use virtual keyword i.e dynamic binding.
     a ->print();
