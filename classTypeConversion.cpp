@@ -16,6 +16,10 @@ class Kilometer{
 class Meter{
     public :
         int meter;
+        Meter (int meter){
+            this->meter = meter;
+        }
+
         Meter(Kilometer &km){
             this->meter = km.kilometer*1000;
         }
@@ -28,7 +32,7 @@ class Meter{
 
 int main(){
     Kilometer km(1);
-    Meter meter = km;
+    Meter meter = km; // To avoid implicit conversion use explicit keyword.
     km.display();
     meter.display();
 }
